@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
 /*Global styles*/
+
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
     --body-font: 'Cabin', sans-serif;
@@ -17,61 +19,62 @@
     --body-font-color: #515151;
 }
 
-html{
+html {
     font-family: var(--body-font);
     font-size: 10px;
     color: var(--body-font-color);
     scroll-behavior: smooth;
 }
 
-
-body{
+body {
     overflow-x: hidden;
 }
 
-section{
+section {
     padding: 3.9rem 0;
     overflow: hidden;
 }
 
-img{
+img {
     width: 100%;
     max-width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-p{
+p {
     font-size: 1.6rem;
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 122.5rem;
     margin: 0 auto;
     padding: 0 2.4 rem;
 }
 
+
 /*header*/
-header{
+
+header {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(0,0,0.5), transparent);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), transparent);
 }
 
-nav{
+nav {
     height: 7.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.menu-toggle{
+.menu-toggle {
     color: #fff;
     font-size: 2.2rem;
     position: absolute;
@@ -82,11 +85,11 @@ nav{
     z-index: 1500;
 }
 
-.fa-times{
+.fa-times {
     display: none;
 }
 
-.nav-list{
+.nav-list {
     list-style: none;
     position: fixed;
     top: 0;
@@ -103,38 +106,42 @@ nav{
     transition: transform .5s;
 }
 
-.nav::before{
+.nav::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0.8);
+    background-color: rgba(0, 0, 0, .8);
     z-index: 1000;
     opacity: 0;
     transform: scale(0);
     transition: opacity .5s;
 }
 
-.open .fa-times{
+.open .fa-times {
     display: block;
 }
 
-.open .fa-bars{
+.open .fa-bars {
     display: none;
 }
 
-.open .nav-list{
+.open .nav-list {
     transform: translateX(0);
 }
 
-.open .nav::before{
+.open .nav::before {
     opacity: 1;
     transform: scale(1);
 }
 
-.nav-link{
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link {
     display: block;
     color: #fff;
     text-transform: uppercase;
@@ -144,22 +151,24 @@ nav{
     transition: color.5s;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--secondary-font-color);
 }
 
+
 /*her0*/
-.hero{
+
+.hero {
     width: 100%;
     height: 100vh;
-    background: url(hero.jpg) center no-repeat;
+    background: url(img/c00.jpg) center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.sub-headline{
+.sub-headline {
     font-size: 8.5rem;
     font-family: var(--secondary-font);
     color: var(--secondary-font-color);
@@ -171,12 +180,12 @@ nav{
     animation-delay: .5s;
 }
 
-.first-letter{
+.first-letter {
     text-transform: uppercase;
     font-size: 10.3rem;
 }
 
-.headline{
+.headline {
     color: #fff;
     font-size: 3.7rem;
     font-family: var(--main-font);
@@ -185,28 +194,28 @@ nav{
     letter-spacing: .5rem;
     margin-right: -.5rem;
     animation: scale .5s forwards;
+    margin-top: 2.2rem;
 }
 
-.separator{
+.separator {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.line{
+.line {
     width: 100%;
     max-width: 8.4rem;
     height: .25rem;
     background-color: #fff;
-    position: center;
+    position: absolute;
     opacity: 0;
     animation: grow 2s forwards;
     animation-delay: .9s;
 }
 
 .line-right::before,
-.line-left::before{
+.line-left::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -217,15 +226,15 @@ nav{
     animation-delay: 1.2s;
 }
 
-.line-right::before{
+.line-right::before {
     border-right-color: #fff;
 }
 
-.line-left::before{
+.line-left::before {
     border-left-color: #fff;
 }
 
-.asterisk{
+.asterisk {
     font-size: 1.2rem;
     color: var(--secondary-font-color);
     margin: 0 1.6rem;
@@ -234,14 +243,13 @@ nav{
     animation-delay: .7s;
 }
 
-
-.single-animation{
+.single-animation {
     opacity: 0;
     animation: fadeDown .5s forwards;
     animation-delay: 1.5s;
 }
 
-.headline-description h5{
+.headline-description h5 {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 100;
@@ -251,14 +259,14 @@ nav{
     margin-right: -3px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-right: -2px;
 }
 
-.cta-btn{
+.cta-btn {
     font-size: 1.1rem;
     background-color: #fff;
     padding: .9rem 1.8rem;
@@ -268,58 +276,62 @@ nav{
 }
 
 .cta-btn:hover,
-.cta-btn:focus{
+.cta-btn:focus {
     color: #fff;
     background-color: var(--secondary-font-color);
 }
 
+
 /*Discover our story*/
-.global headline{
+
+.global headline {
     text-align: center;
     margin-top: 3.9rem;
 }
 
-.discover-our-story .global-headline{
+.discover-our-story .global-headline {
     margin-top: 6.9rem;
 }
 
-.global-headline .asterisk{
+.global-headline .asterisk {
     color: var(--body-font-color);
     margin: 2.4rem 0;
 }
 
-.headline-dark{
+.headline-dark {
     color: var(--main-font-color-dark);
     letter-spacing: .7rem;
     margin-right: -.7rem;
+    margin-top: 2.2rem;
 }
 
-.global-headline .sub-headline{
+.global-headline .sub-headline {
     letter-spacing: -1px;
+    margin-top: 4rem;
     line-height: .42;
 }
 
-.restaurant-info{
+.restaurant-info {
     text-align: center;
 }
 
-.restaurant-description{
+.restaurant-description {
     margin-bottom: 3rem;
 }
 
-.restaurant-description p{
+.restaurant-description p {
     line-height: 1.6;
     margin-bottom: 2.4rem;
 }
 
-.body-btn{
+.body-btn {
     font-size: 1.5rem;
     color: var(--secondary-font-color);
     position: relative;
     transition: color .5s;
 }
 
-.body-btn::before{
+.body-btn::before {
     content: '';
     position: absolute;
     left: 0;
@@ -331,47 +343,55 @@ nav{
 }
 
 .body-btn:hover,
-.body-btn:focus{
+.body-btn:focus {
     color: var(--main-font-color-dark);
 }
 
 .body-btn:hover::before,
-.body-btn:focus::before{
+.body-btn:focus::before {
     background-color: var(--main-font-color-dark);
 }
 
+
 /*tasteful recipes*/
-.tasteful-recipes{
-    background: url("tasteful-recipes.jpg") center no-repeat;
+
+.tasteful-recipes {
+    background: url("img/i3.jpg") center no-repeat;
     background-size: cover;
 }
 
-.between{
+.between {
     min-height: 65vh;
     display: flex;
     align-items: center;
 }
 
+
 /*discover our menu*/
-.image-group{
+
+.image-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
 }
 
-.discover-our-menu .restaurant-description{
+.discover-our-menu .restaurant-description {
     padding-top: 3rem;
     margin-bottom: 0;
 }
 
+
 /*the perfect blend*/
-.perfect-blend{
-    background: url(perfect-blend.jpg) center no-repeat;
+
+.perfect-blend {
+    background: url(img/i66.jpg) center no-repeat;
     background-size: cover;
 }
 
+
 /*footer*/
-footer{
+
+footer {
     padding: 7.9rem 0;
     background-color: #121212;
     color: #fff;
@@ -379,7 +399,7 @@ footer{
     position: relative;
 }
 
-.back-to-top{
+.back-to-top {
     width: 7rem;
     height: 7rem;
     background-color: #121212;
@@ -390,7 +410,7 @@ footer{
     border-radius: 50%;
 }
 
-.back-to-top i{
+.back-to-top i {
     display: block;
     color: #fff;
     font-size: 2rem;
@@ -398,11 +418,11 @@ footer{
     animation: up 2s infinite;
 }
 
-.footer-content{
+.footer-content {
     overflow: hidden;
 }
 
-.footer-content h4{
+.footer-content h4 {
     font-size: 1.9rem;
     text-transform: uppercase;
     font-weight: 100;
@@ -410,26 +430,26 @@ footer{
     margin-bottom: 3rem;
 }
 
-.footer-content .asterisk{
+.footer-content .asterisk {
     margin: 2.4rem 0;
 }
 
-.footer-content-about{
+.footer-content-about {
     margin-bottom: 5.4rem;
 }
 
-.footer-content-about p{
+.footer-content-about p {
     line-height: 2;
 }
 
-.social-icons{
+.social-icons {
     list-style: none;
     margin-bottom: 5.4rem;
     display: flex;
     justify-content: center;
 }
 
-.social-icons i{
+.social-icons i {
     font-size: 2rem;
     color: #fff;
     padding: .8rem 2rem;
@@ -438,25 +458,25 @@ footer{
 }
 
 .social-icons i:hover,
-.social-icons i:focus{
+.social-icons i:focus {
     color: var(--secondary-font-color);
 }
 
-.newsletter-form{
+.newsletter-form {
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.newsletter-input{
+.newsletter-input {
     width: 100%;
     max-width: 25rem;
     padding: 1rem;
     border-radius: .4rem;
 }
 
-.newsletter-btn{
+.newsletter-btn {
     background-color: transparent;
     border: none;
     color: var(--main-font-color-dark);
@@ -469,21 +489,20 @@ footer{
     margin: 10.5rem;
 }
 
+
 /*media queries*/
-@media screen and (min-width: 900px){
-    section{
+
+@media screen and (min-width: 900px) {
+    section {
         padding: 7.9rem;
     }
-
-    .menu-toggle{
+    .menu-toggle {
         display: none;
     }
-
-    .nav{
+    .nav {
         justify-content: space-between;
     }
-
-    .nav-list{
+    .nav-list {
         position: initial;
         width: initial;
         height: initial;
@@ -494,25 +513,20 @@ footer{
         transform: initial;
         transition: initial;
     }
-
-    .nav-item{
+    .nav-item {
         margin: 0 2.4rem;
         border: none;
     }
-
-    .nav-item:last-child{
+    .nav-item:last-child {
         margin-right: 0;
     }
-
-    .nav-link{
+    .nav-link {
         font-size: 1.3rem;
     }
-
-    .active{
+    .active {
         position: relative;
     }
-
-    .active::before{
+    .active::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -521,127 +535,117 @@ footer{
         left: 0;
         bottom: -3px;
     }
-
-    .sub-headline{
+    .sub-headline {
         font-size: 10rem;
     }
-
-    .first-letter{
+    .first-letter {
         font-size: 12.2rem;
     }
-
-    .headline{
+    .headline {
         font-size: 4.7rem;
         letter-spacing: .8rem;
+        margin-top: 2.2rem;
     }
-    
-    .line{
+    .line {
         max-width: 11.4rem;
     }
-
-    .restaurant-info{
+    .restaurant-info {
         display: flex;
         align-items: center;
     }
-
-    .restaurant-info > div{
+    .restaurant-info>div {
         flex: 1;
     }
-
-    .padding-right{
+    .padding-right {
         padding-right: 7rem;
     }
-
-    .footer-content{
+    .footer-content {
         max-width: 77.5rem;
         margin: auto;
     }
-
-    .footer-content-about{
+    .footer-content-about {
         max-width: 51.3rem;
         margin: 0 auto 5.4rem;
     }
-
-    .footer-content-divider{
+    .footer-content-divider {
         display: flex;
         justify-content: space-between;
     }
-
     .social-media,
-    .newsletter-form{
+    .newsletter-form {
         width: 100%;
         max-width: 27.3rem;
         margin: 0 1rem;
     }
-
-    .social-icons i{
+    .social-icons i {
         opacity: 1;
     }
-
-    .newsletter-btn{
+    .newsletter-btn {
         margin-left: 7.5rem;
     }
 }
 
+
 /*animations*/
+
 @keyframes fadeUp {
-    0%{
+    0% {
         transform: translateY(4rem);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes scale {
-    0%{
+    0% {
         transform: scale(2);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: scale(1);
     }
 }
 
 @keyframes grow {
-    0%{
+    0% {
         width: 0;
     }
-    100%{
+    100% {
         opacity: 1;
         width: 100;
     }
 }
 
 @keyframes spin {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: rotate(-360deg);
     }
 }
 
 @keyframes fadeDown {
-    0%{
+    0% {
         transform: translateY(-1rem);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes up {
-    0%{
+    0% {
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
         transform: translateY(-1rem);
     }
