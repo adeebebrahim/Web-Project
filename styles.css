@@ -586,6 +586,72 @@ footer {
 }
 
 
+/* menu css */
+
+.menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    padding-top: 35px;
+}
+
+.image-group2 {
+    display: grid;
+    grid-gap: 7rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image-group2,
+.imgtxt {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+}
+
+h5 {
+    font-family: Times, 'Times New Roman', serif;
+}
+
+.menu1 .h1 {
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    box-sizing: border-box;
+    float: left;
+    width: 40%;
+    padding-top: 35px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: var(--secondary-font-color);
+    text-align: center;
+    text-overflow: clip;
+    font-size: 30px;
+}
+
+.headerbackground {
+    background-color: #121212;
+}
+
+.clicker {
+    background: none;
+    /* background-color: #121212; */
+    border-radius: 5px;
+    border: none;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    /* text-shadow: 1px 1px var(--body-font-color); */
+}
+
+
 /*animations*/
 
 @keyframes fadeUp {
